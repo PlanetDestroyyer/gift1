@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block head %}
+<style>
+</style>
+{% endblock head %}
+{% block body %}
+<div class="grid-container">
+  {% for frame in frame %}
+  <div class="frame">
+    <div class="border">
+      <div class="image">
+        <img src="data:image/jpeg;base64,{{ frame.image_data }}" class="cards" alt="..." />
+      </div><!--end image-->
+    </div><!--end border-->
+  </div><!--end frame-->
+  {% endfor %}
+</div>
+{% endblock body %}
